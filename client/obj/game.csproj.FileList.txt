@@ -1,0 +1,7 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\game.Properties.Resources.resources
+obj\Debug\game.csproj.GenerateResource.Cache
+bin\Debug\game.exe
+bin\Debug\game.pdb
+obj\Debug\game.exe
+obj\Debug\game.pdb
