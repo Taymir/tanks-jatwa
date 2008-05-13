@@ -1,0 +1,9 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\WindowsGame1.exe
+bin\Debug\WindowsGame1.pdb
+obj\Debug\WindowsGame1.exe
+obj\Debug\WindowsGame1.pdb
+bin\Debug\Microsoft.Xna.Framework.dll
+bin\Debug\Microsoft.Xna.Framework.Game.dll
+bin\Debug\Microsoft.Xna.Framework.Game.xml
+bin\Debug\Microsoft.Xna.Framework.xml

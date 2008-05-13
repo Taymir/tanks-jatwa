@@ -5,7 +5,7 @@ using System.Net;
 
 namespace Networking
 {
-    public class Protocol : Dispatcher
+    class Protocol : Dispatcher
     {
         // Список всех типов пакетов (описание формата заданного каждого вида пакета - далее)
         #region packet_types
@@ -28,9 +28,7 @@ namespace Networking
             // Стрельба
             Shoot,
             // Попадание
-            Hit, 
-            // Смерть
-            Dead
+            Hit
         }
         #endregion packet_types
 
@@ -124,12 +122,6 @@ namespace Networking
             // | Повреждения [short] |
             public short damage;
         }
-
-        public class DeadStruct : BaseStruct
-        {
-            // | Идентификатор клиента [uint32] |
-            public uint client_id;
-        }
         #endregion packet_structs
 
         // События, срабатывающие при приходе соответствующих пакетов
@@ -143,7 +135,6 @@ namespace Networking
         public event EventHandler<ListStruct> OnList;
         public event EventHandler<ShootStruct> OnShoot;
         public event EventHandler<HitStruct> OnHit;
-        public event EventHandler<DeadStruct> OnDead;
         #endregion events
 
         public override void onRecieve(Packet packet, EndPoint sender)
@@ -286,17 +277,6 @@ namespace Networking
                             OnHit(this, s);
                     }
                     break;
-                case Type.Dead:
-                    {
-                        DeadStruct s = new DeadStruct();
-                        s.adress = sender;
-
-                        s.client_id = packet.ReadUInt();
-
-                        if (OnDead != null)
-                            OnDead(this, s);
-                    }
-                    break;
 
                 #endregion actions
             }
@@ -412,15 +392,6 @@ namespace Networking
 
             packet.Write(s.client_id);
             packet.Write(s.damage);
-            connection.sendTo(packet, s.adress);
-        }
-
-        public void SendDead(DeadStruct s)
-        {
-            Packet packet = new Packet();
-            packet.Write((int)Type.Dead);
-
-            packet.Write(s.client_id);
             connection.sendTo(packet, s.adress);
         }
         #endregion send_packets

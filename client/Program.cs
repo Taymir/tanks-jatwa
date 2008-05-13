@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
+using System;
 
-namespace game
+namespace WindowsGame1
 {
     static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            using (Game1 game = new Game1())
+            {
+                game.Run();
+            }
         }
     }
 }
+

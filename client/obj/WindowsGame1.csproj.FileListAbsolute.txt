@@ -1,0 +1,9 @@
+C:\Documents and Settings\Akkarin\Мои документы\Visual Studio 2005\Projects\WindowsGame1\obj\Debug\WindowsGame1.exe
+C:\Documents and Settings\Akkarin\Мои документы\Visual Studio 2005\Projects\WindowsGame1\obj\Debug\WindowsGame1.pdb
+C:\Documents and Settings\Akkarin\Мои документы\Visual Studio 2005\Projects\WindowsGame1\bin\Debug\WindowsGame1.exe
+C:\Documents and Settings\Akkarin\Мои документы\Visual Studio 2005\Projects\WindowsGame1\bin\Debug\WindowsGame1.pdb
+C:\Documents and Settings\Akkarin\Мои документы\Visual Studio 2005\Projects\WindowsGame1\bin\Debug\Microsoft.Xna.Framework.dll
+C:\Documents and Settings\Akkarin\Мои документы\Visual Studio 2005\Projects\WindowsGame1\bin\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Documents and Settings\Akkarin\Мои документы\Visual Studio 2005\Projects\WindowsGame1\bin\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Documents and Settings\Akkarin\Мои документы\Visual Studio 2005\Projects\WindowsGame1\bin\Debug\Microsoft.Xna.Framework.xml
+C:\Documents and Settings\Akkarin\Мои документы\Visual Studio 2005\Projects\WindowsGame1\obj\Debug\ResolveAssemblyReference.cache

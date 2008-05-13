@@ -275,7 +275,14 @@ namespace Networking
         // Готов получать пакеты от заданного адресата
         public void recieveFrom(ref EndPoint remoteEp)
         {
-            socket.BeginReceiveFrom(rawPacket, 0, rawPacket.Length, SocketFlags.None, ref remoteEp, new AsyncCallback(OnReceive), remoteEp);
+            try
+            {
+                socket.BeginReceiveFrom(rawPacket, 0, rawPacket.Length, SocketFlags.None, ref remoteEp, new AsyncCallback(OnReceive), remoteEp);
+            }
+            catch (SocketException)
+            {
+                Console.WriteLine("Клиент отсоединился без уведомления => Сервер упал.");//@BUG
+            }
         }
 
 
